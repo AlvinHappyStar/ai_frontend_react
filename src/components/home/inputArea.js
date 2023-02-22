@@ -4,7 +4,20 @@ import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import { DISPLAY_FLEX_COLUMN, DISPLAY_FLEX_ROW } from '../../style/default';
 
+import { addImage } from "../../redux/features/imageSlice";
+
+import { useDispatch } from "react-redux";
+
 function InputArea() {
+
+    const dispatch = useDispatch();
+
+    const handleGenerate = () => {
+        console.log("handleGenerate")
+
+        dispatch(addImage("./images/1.jpg"));
+    }
+    
     return (
         <Box sx={{
             ...DISPLAY_FLEX_COLUMN,
@@ -87,7 +100,9 @@ function InputArea() {
                                 backgroundColor: '#0768af',
                             },
                         }
-                    }}>
+                    }}
+                    onClick={handleGenerate}
+                >
                     Generate image
                 </Button>
             </Box>

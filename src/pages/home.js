@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import TopBar from '../components/home/topBar';
 import { DISPLAY_FLEX_COLUMN, DISPLAY_FLEX_ROW } from '../style/default';
 import InputArea from '../components/home/inputArea';
+import Images from '../components/home/images';
 
 
 function Home() {
@@ -32,6 +33,20 @@ function Home() {
                 </Box>
 
                 <InputArea />
+
+                <Box sx={{
+                    ...DISPLAY_FLEX_ROW,
+                    ...{
+                        textTransform:'uppercase',
+                        fontWeight:'600',
+                        padding:'15px 0px 5px 0px',
+                    }
+                }}>
+                    
+                    
+                </Box>
+
+                <Images />
 
             </Box>
         </>
